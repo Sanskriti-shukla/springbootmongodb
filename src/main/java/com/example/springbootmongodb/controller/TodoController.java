@@ -29,7 +29,7 @@ public class TodoController {
     }
     @PostMapping
     public ResponseEntity<?> createTodo(@RequestBody TodoDTO todoDTO){
-        try {
+        try { 
             todoService.createTodo(todoDTO);
             return  new ResponseEntity<TodoDTO>(todoDTO,HttpStatus.OK);
         }catch (ConstraintViolationException e){
