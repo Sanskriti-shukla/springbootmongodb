@@ -51,11 +51,13 @@ public class TodoController {
     public ResponseEntity<?> updateTodo(@PathVariable ("id") String id,@RequestBody TodoDTO todoDTO){
    try{
        todoService.updateTodo(id,todoDTO);
-       return new ResponseEntity<>("update todo with id"+" "+id, HttpStatus.OK);
+       return new ResponseEntity<>("update todo with id"+" "+id,      HttpStatus.OK);
    }catch ( ConstraintViolationException e){
        return new ResponseEntity<>(e.getMessage(), HttpStatus.UNPROCESSABLE_ENTITY);
 
    }catch (TodoCollectionException e){
+
+
        return  new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
    }
 
