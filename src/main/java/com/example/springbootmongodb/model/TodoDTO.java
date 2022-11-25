@@ -16,7 +16,8 @@ import java.util.Date;
 public class TodoDTO {
     @Id
     private  String id;
-@NotNull(message = "todo can not be null")
+
+    @NotNull(message = "todo can not be null")
     private  String todo;
     @NotNull(message = "description can not be null")
     private String description;
