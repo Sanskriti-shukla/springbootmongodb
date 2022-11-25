@@ -1,0 +1,9 @@
+server:
+  port: 5002
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/TodoList
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
