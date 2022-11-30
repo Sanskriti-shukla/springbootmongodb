@@ -1,4 +1,2 @@
-package com.example.springbootmongodb.decorator;
-
-public class TodoResponse {
+package com.example.springbootmongodb.decorator;public class TodoResponse {
 }
